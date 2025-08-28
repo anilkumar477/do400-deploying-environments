@@ -9,6 +9,7 @@ pipeline{
             steps{
                 sh './mvnw clean test'
             }
+        }
             stage('Packages'){
                 steps{
                     sh '''
@@ -19,6 +20,6 @@ pipeline{
                     archiveArtifacts 'target/*.jar'
                 }
             }
-        }
+        
     }
 }
